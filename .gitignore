@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+*.egg
+.Python
+.env
+.venv/
+venv/
+ENV/
+env/
+*.sqlite3
+
+# LangChain / FAISS
+resume_faiss_index/
+*.faiss
+*.pkl
+
+# VSCode / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+logs/
+*.out
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Vercel build cache
+.vercel
