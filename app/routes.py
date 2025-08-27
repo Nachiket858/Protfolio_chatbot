@@ -1,11 +1,12 @@
 from flask import Blueprint, request, jsonify
 from app.resume_qa import ResumeQA
 import os
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 routes = Blueprint("routes", __name__)
 
 # Initialize ResumeQA (load once for performance)
-pdf_path = r"P:\All_Document___\DOC 2025\college resume\Nachiket_Shinde_Resume_v6.pdf"
+pdf_path = os.path.join(BASE_DIR, "..", "static", "Nachiket_Shinde_Resume_v6.pdf")
 qa_engine = ResumeQA(pdf_path)
 
 @routes.route("/ask", methods=["POST"])
